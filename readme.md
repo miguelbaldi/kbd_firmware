@@ -1,3 +1,14 @@
+# KBD Bilateral Combinations
+
+This fork is intended to integrate the **amazing** [sunaku](https://github.com/sunaku) work on QMK [bilateral combinations](https://sunaku.github.io/home-row-mods.html),
+allowing an improved experience using [home row mods](https://precondition.github.io/home-row-mods) with Vial on Corne v4.1.
+
+On this repository, **only v4.1 standard Vial** configuration has bilateral combinations customization applied.
+
+To achieve such integration, I've forked vial-qmk and ported sunako's patch into it: [vial-qmk](https://github.com/miguelbaldi/vial-qmk)
+
+If you need a pre compiled firmware version, please contact me, maybe I can help you.
+
 # KBD firmware
 
 ## How to build
@@ -37,4 +48,11 @@ Please change `kb`, `kr` and `km` when build other.
 ### All cleaning and building
 ```sh
 make update-all
+```
+
+### Troubleshooting
+If you encounter any compilation errors either on qmk or vial, try the following:
+```sh
+cd src/vial-kb/vial-qmk
+qmk git-submodule
 ```
